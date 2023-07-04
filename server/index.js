@@ -11,7 +11,7 @@ const stripe = new Stripe(
   "sk_test_51LCGi3AFlpcHrxjJz1hK5BfuMXM7Hb09zGelXXYZpWYGV4mpSS9uAOiDNdsKAktOTQ6wGlepvk6dDUkiFKm0cPte00NUIuv8sv"
 );
 
-app.use(cors({ origin: "http://localhost:3000" })); //configure the cors
+app.use(cors({ origin: "https://stripe-store-6kdg.onrender.com/ " })); //configure the cors
 app.use(express.json());
 
 app.post("/api/checkout", async (req, res) => {
