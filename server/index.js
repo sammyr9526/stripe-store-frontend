@@ -4,7 +4,7 @@ const cors = require("cors"); //communication between frontend and backend
 const config = require("dotenv").config();
 
 const app = express();
-console.log(process.env.REACT_APP_PORT);
+
 const PORT = process.env.REACT_APP_PORT || 4100;
 
 const stripe = new Stripe(
@@ -33,6 +33,6 @@ app.post("/api/checkout", async (req, res) => {
   }
 });
 
-app.listen(process.env.PORT, () => {
-  console.log("server is running ", PORT);
+app.listen("4000", () => {
+  console.log("server is running 4000");
 });
