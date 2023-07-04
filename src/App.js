@@ -6,11 +6,10 @@ import {
   useElements,
   useStripe,
 } from "@stripe/react-stripe-js";
-import "bootswatch/dist/cyborg/bootstrap.min.css";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
-const stripePromise = loadStripe(process.enc.REACT_APP_STRIPE);
+const stripePromise = loadStripe(process.env.REACT_APP_STRIPE);
 
 const CheckoutForm = () => {
   const stripe = useStripe();
