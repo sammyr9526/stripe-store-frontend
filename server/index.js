@@ -5,7 +5,7 @@ const config = require("dotenv").config();
 
 const app = express();
 
-const PORT = process.env.REACT_APP_PORT || 4100;
+const PORT = process.env.REACT_APP_PORT || 3500;
 
 const stripe = new Stripe(
   "sk_test_51LCGi3AFlpcHrxjJz1hK5BfuMXM7Hb09zGelXXYZpWYGV4mpSS9uAOiDNdsKAktOTQ6wGlepvk6dDUkiFKm0cPte00NUIuv8sv"
@@ -33,6 +33,6 @@ app.post("/api/checkout", async (req, res) => {
   }
 });
 
-app.listen("4000", () => {
-  console.log("server is running 4000");
+app.listen(PORT, () => {
+  console.log("server is running ", PORT);
 });

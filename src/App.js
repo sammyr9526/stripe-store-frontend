@@ -19,7 +19,6 @@ const CheckoutForm = () => {
   const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
-    console.log(e.target);
     e.preventDefault();
 
     const { error, paymentMethod } = await stripe.createPaymentMethod({
@@ -82,7 +81,7 @@ const CheckoutForm = () => {
 function App() {
   return (
     <>
-      <nav className="navbar navbar-expand-lg navbar-dark bg-warning mb-5">
+      <nav className="navbar navbar-expand-lg navbar-dark bg-warning">
         <div className="container-fluid">
           <a className="navbar-brand" href="/">
             StripeStore
@@ -90,7 +89,7 @@ function App() {
         </div>
       </nav>
 
-      <div className="d-block container d-flex flex-row-reverse mt-3">
+      <div className="d-block container d-flex flex-row-reverse mt-4">
         <button
           type="button"
           className="btn btn-primary"
